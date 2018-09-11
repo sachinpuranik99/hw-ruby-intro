@@ -29,11 +29,15 @@ end
 
 def starts_with_consonant? s
   # YOUR CODE HERE
-  
+  s =~ /\A(?=[^aeiou])(?=[a-z])/i
 end
 
 def binary_multiple_of_4? s
   # YOUR CODE HERE
+  if s.tr('01','') != '' or s == ''
+    return false
+  end
+  s.to_i(2)%4 == 0 
 end
 
 # Part 3
