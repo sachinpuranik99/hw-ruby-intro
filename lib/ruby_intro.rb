@@ -44,4 +44,29 @@ end
 
 class BookInStock
 # YOUR CODE HERE
+  attr_reader :isbn, :price
+  def isbn= (isbn)
+    if isbn == ''
+      raise ArgumentError
+    end
+    @isbn = isbn
+  end
+
+  def price= (price)
+    price = price.to_f
+    if price <= 0
+      raise ArgumentError
+    end
+    @price = price
+  end
+  
+  def initialize(isbn, price)
+    self.isbn = isbn
+    self.price = price
+  end
+
+  def price_as_string
+    return "$" + sprintf("%.2f", price)
+  end
+
 end
