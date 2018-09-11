@@ -45,6 +45,11 @@ end
 class BookInStock
 # YOUR CODE HERE
   attr_reader :isbn, :price
+  def initialize(isbn, price)
+    self.isbn = isbn
+    self.price = price
+  end
+  
   def isbn= (isbn)
     if isbn == ''
       raise ArgumentError
@@ -60,13 +65,7 @@ class BookInStock
     @price = price
   end
   
-  def initialize(isbn, price)
-    self.isbn = isbn
-    self.price = price
-  end
-
   def price_as_string
     return "$" + sprintf("%.2f", price)
   end
-
 end
