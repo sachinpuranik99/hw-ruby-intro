@@ -4,6 +4,7 @@
 
 def sum arr
   # YOUR CODE HERE
+  arr.inject(0, :+)
 end
 
 def max_2_sum arr
@@ -18,6 +19,7 @@ end
 
 def hello(name)
   # YOUR CODE HERE
+  "Hello" + name
 end
 
 def starts_with_consonant? s
